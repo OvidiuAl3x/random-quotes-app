@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 3s ease-out;
+}
+
+.container {
+    width: 100%;
+    margin: 20px;
+    max-width: 50em;
+    border-radius: 12px;
+    transition: all 3s ease-in-out;
+}
+
+.quotes {
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.authorContainer {
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+}
+
+.author {
+    margin-right: 50px;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 9px;
+    animation: fadeIn 3.5s;
+}
+
+.newQuoteContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+
+}
+
+.button {
+    margin: 0px 52px;
+    color: black;
+    padding: 5px 5px;
+    border: 3px solid #00adb5;
+    position: relative;
+    background-color: #ffffff10;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: inherit;
+    transition: all 1s;
+}
+
+.button::before {
+    top: -10px;
+    left: -10px;
+    border-width: 3px 0 0 3px;
+}
+
+.button::after {
+    bottom: -10px;
+    right: -10px;
+    border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+    width: calc(100% + 17px);
+    height: calc(100% + 17px);
+}
